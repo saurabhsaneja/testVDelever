@@ -1,0 +1,77 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Black.otf",
+      "sha1": "df9c5c1a9cc73bf7312754b29b95eb4a11ddb7b6"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-BlackItalic.otf",
+      "sha1": "a92c4d0172eff81f53530b487aad82095f327a33"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Bold.otf",
+      "sha1": "88774af16e3833595460fec4ba7f84c7c86b2bd7"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-BoldItalic.otf",
+      "sha1": "84936a100c70055b58b7d7691d44876f62a825a9"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Heavy.otf",
+      "sha1": "1a8827f20a84315de1418afb242e334359519aab"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-HeavyItalic.otf",
+      "sha1": "55a5953fd755926fdbbdcc654d6c3456a336a5c8"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Light.otf",
+      "sha1": "b181b7198f3687e67c13b138315460da18239d08"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-LightItalic.otf",
+      "sha1": "bf929021c2257d3962c993e0292cd8099d13cfa4"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Medium.otf",
+      "sha1": "79fc34b6795e5bee6038e891337a737d36911be0"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-MediumItalic.otf",
+      "sha1": "2133426c75d657bca45e0a03625f6aca012eb2f0"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Regular.otf",
+      "sha1": "2937fad19e4a1ff426f754eeb85fb4065812ccda"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-RegularItalic.otf",
+      "sha1": "56252c29e8091f1559d552f3730bf0591caa6114"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Semibold.otf",
+      "sha1": "1d044f5eca2cf8f7abab15c6106d880b9d49e3e4"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-SemiboldItalic.otf",
+      "sha1": "f0f0f3690d32308388bf21dfd8f3e7ebdde17717"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Thin.otf",
+      "sha1": "02980a8ca937ab493cab1a32cfeda11ea0ea18d5"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-ThinItalic.otf",
+      "sha1": "099f6e568c3ed00f1bb9268ad17b1c51984e5b8e"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-Ultralight.otf",
+      "sha1": "156eb403f65af9dbac2496b42ab1f0a33a25039f"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Display-UltralightItalic.otf",
+      "sha1": "aa1a280881515372d2ac2bccef429f03bdae3224"
+    }
+  ]
+}
