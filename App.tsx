@@ -13,7 +13,8 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <SafeAreaView style={{ flex: 1 }}>
-        <MainStack/>
+        <StatusBar backgroundColor={'#9766FF'} />
+        <MainStack />
       </SafeAreaView>
     </NavigationContainer>
   );

@@ -75,38 +75,41 @@ const Home = ({ navigation }) => {
       </View>
     )
   }
+  const SingleRecommended = () => (
+    <View style={styles.recommendedContainer} >
+      <View style={[styles.shape, { width: 84 / 390 * width, height: height * 94 / 1087 }]} />
+      <View style={{ width: '70%', marginLeft: 10 }} >
+        <Text style={[styles.shareText, { width: '80%' }]} >Now share the Construction Sectors with your anyone and can save it as bookmark</Text>
+        <View style={styles.updatedExplore} >
+          <Text style={styles.updatedText} >Updated  |  06:30 AM</Text>
+          <TouchableOpacity style={[styles.exploreButton, { width: 76 / 390 * width, height: height * 24 / 1087 }]}>
+            <Text style={styles.exploreText}>Explore</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.rightImage} >
+        <RecommendedRightDark />
+        {/* <RecommendedRightLight /> */}
+      </View>
+      <View style={styles.leftImage} >
+        <RecommendedLeftDark />
+        {/* <RecommendedLeftLight /> */}
+      </View>
+    </View>
+  )
   const Recommended = () => {
     return (
       <View style={{ marginTop: 20 }} >
         <Heading title='Recommended for you' />
-        <View style={styles.recommendedContainer} >
-          <View style={[styles.shape, { width: 84 / 390 * width, height: height * 94 / 1087 }]} />
-          <View style={{ width: '70%', marginLeft: 10 }} >
-            <Text style={[styles.shareText, { width: '80%' }]} >Now share the Construction Sectors with your anyone and can save it as bookmark</Text>
-            <View style={styles.updatedExplore} >
-              <Text style={styles.updatedText} >Updated  |  06:30 AM</Text>
-              <TouchableOpacity style={[styles.exploreButton, { width: 76 / 390 * width, height: height * 24 / 1087 }]}>
-                <Text style={styles.exploreText}>Explore</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.rightImage} >
-            <RecommendedRightDark />
-            {/* <RecommendedRightLight /> */}
-          </View>
-          <View style={styles.leftImage} >
-            <RecommendedLeftDark />
-            {/* <RecommendedLeftLight /> */}
-          </View>
-        </View>
+        <SingleRecommended />
+        <SingleRecommended />
       </View>
     )
   }
   //UI
   return (
-    <>
-      <StatusBar backgroundColor={'#9766FF'} />
-      <ScrollView contentContainerStyle={styles.container} >
+    <View style={styles.container} >
+      <ScrollView>
         <LinearGradient colors={['#9766FF', '#F7F3FF']} style={[styles.headerGradient, { height: height * 186 / 1087 }]}>
           <Header />
         </LinearGradient>
@@ -117,7 +120,7 @@ const Home = ({ navigation }) => {
           <Recommended />
         </View>
       </ScrollView>
-    </>
+    </View>
   );
 };
 
@@ -126,6 +129,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white'
   },
   mainView: {
     padding: 20
@@ -224,7 +228,11 @@ const styles = StyleSheet.create({
   recommendedContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 20
+    padding: 20,
+    backgroundColor: '#F6F4FF',
+    borderRadius: 15,
+    overflow: 'hidden',
+    marginBottom: 15
   },
   shareText: {
     fontSize: 12,
