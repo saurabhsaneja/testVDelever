@@ -79,14 +79,24 @@ const Home = ({ navigation }) => {
     return (
       <View style={{ marginTop: 20 }} >
         <Heading title='Recommended for you' />
-        <View>
+        <View style={styles.recommendedContainer} >
+          <View style={[styles.shape, { width: 84 / 390 * width, height: height * 94 / 1087 }]} />
+          <View style={{ width: '70%', marginLeft: 10 }} >
+            <Text style={[styles.shareText, { width: '80%' }]} >Now share the Construction Sectors with your anyone and can save it as bookmark</Text>
+            <View style={styles.updatedExplore} >
+              <Text style={styles.updatedText} >Updated  |  06:30 AM</Text>
+              <TouchableOpacity style={[styles.exploreButton, { width: 76 / 390 * width, height: height * 24 / 1087 }]}>
+                <Text style={styles.exploreText}>Explore</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
           <View style={styles.rightImage} >
             <RecommendedRightDark />
-            <RecommendedRightLight />
+            {/* <RecommendedRightLight /> */}
           </View>
           <View style={styles.leftImage} >
             <RecommendedLeftDark />
-            <RecommendedLeftLight />
+            {/* <RecommendedLeftLight /> */}
           </View>
         </View>
       </View>
@@ -207,4 +217,48 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
   },
+  shape: {
+    backgroundColor: '#FFC5C5',
+    borderRadius: 12,
+  },
+  recommendedContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 20
+  },
+  shareText: {
+    fontSize: 12,
+    lineHeight: 18,
+    fontFamily: getSFProDisplayFont('BL'),
+    color: '#060047',
+  },
+  updatedText: {
+    fontSize: 10,
+    lineHeight: 18,
+    fontFamily: getSFProDisplayFont('S'),
+    color: '#060047',
+  },
+  exploreButton: {
+    backgroundColor: '#995BFF',
+    // paddingHorizontal: 16,
+    // paddingVertical: 24,
+    borderRadius: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '##995BFF',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 15,
+    elevation: 2,
+  },
+  exploreText: {
+    fontSize: 10,
+    fontFamily: getSFProDisplayFont('BL'),
+    color: '#fff',
+  },
+  updatedExplore: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  }
 })
