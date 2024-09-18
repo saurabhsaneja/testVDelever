@@ -19,6 +19,9 @@ import RatingsLeftImage from "../assets/images/ratingsLeft.svg";
 import Bone1Image from "../assets/images/bone1.svg";
 import Bone2Image from "../assets/images/bone2.svg";
 import EditIconImage from "../assets/images/editIcon.svg";
+import GroomerImage from "../assets/images/groomer.svg";
+import GroomerLeftImage from "../assets/images/groomerLeft.svg";
+import GroomerRightImage from "../assets/images/groomerRight.svg";
 
 const PetCare = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
@@ -51,7 +54,7 @@ const PetCare = ({ navigation }) => {
     <View style={[styles.textInputContainer, { height: height * 46 / 1087 }]}>
       <View style={styles.textInputLeftContainer}>
         <SearchImage />
-        <TextInput placeholder='What are you looking for?' placeholderTextColor='#959595' style={[styles.input, { height: height * 46 / 1087 }]} />
+        <TextInput placeholder='What are you looking for?' placeholderTextColor='#FF6694' style={[styles.input, { height: height * 46 / 1087 }]} />
       </View>
       <FilterImage />
     </View>
@@ -130,6 +133,36 @@ const PetCare = ({ navigation }) => {
       </View>
     )
   }
+  const Dots = () => {
+    return (
+      <View style={[styles.animalsRow, { alignSelf: 'center', marginTop: 10 }]}>
+        <View style={styles.darkDot} />
+        <View style={styles.lightDot} />
+        <View style={styles.lightDot} />
+      </View>
+    )
+  }
+  const Groomer = () => (
+    <LinearGradient colors={['#fcb0b0', '#f8c1d4']} start={{ x: 1, y: 0 }} end={{ x: 0, y: 1 }} style={[styles.groomerGradient, { height: 150 / 1087 * height }]}>
+      <View>
+        <GroomerLeftImage />
+        <View style={{ position: 'absolute', left: 20, top: '40%' }} >
+          <Text style={styles.bookNow} >BOOK{'\n'}NOW!</Text>
+          <Text style={styles.minus} >-20%</Text>
+        </View>
+      </View>
+      <View style={{ zIndex: 20, alignItems: 'center' }} >
+        <Text style={styles.allNew}>All-New{'\n'}Groomers{'\n'}in Town!</Text>
+        <Dots />
+      </View>
+      <View >
+        <View>
+          <GroomerImage style={{ position: 'absolute', left: 20, top: '40%', zIndex: 1 }} />
+        </View>
+        <GroomerRightImage />
+      </View>
+    </LinearGradient>
+  )
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -138,6 +171,7 @@ const PetCare = ({ navigation }) => {
         </LinearGradient>
         <View style={styles.whiteContainer}>
           <MyTextInput />
+          <Groomer />
           <ServiceProviders />
           <Ratings />
         </View>
@@ -258,6 +292,11 @@ const styles = StyleSheet.create({
     left: 0,
     zIndex: -10
   },
+  leftImage2: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+  },
   providerRow: {
     flexDirection: 'row',
     alignItems: 'center'
@@ -310,7 +349,46 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-
+  groomerGradient: {
+    borderRadius: 20,
+    overflow: 'hidden',
+    marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  allNew: {
+    fontSize: 18,
+    fontFamily: getSFProDisplayFont('BL'),
+    lineHeight: 21,
+    color: 'black'
+  },
+  darkDot: {
+    height: 8,
+    width: 8,
+    borderRadius: 8 / 2,
+    backgroundColor: '#FF6694',
+    marginRight: 4
+  },
+  lightDot: {
+    height: 8,
+    width: 8,
+    borderRadius: 8 / 2,
+    backgroundColor: '#FFD7E5',
+    marginRight: 4
+  },
+  bookNow: {
+    fontSize: 15,
+    lineHeight: 17.9,
+    fontFamily: getSFProDisplayFont('H'),
+    color: '#FF6694'
+  },
+  minus: {
+    fontSize: 14,
+    fontFamily: getSFProDisplayFont('BO'),
+    color: 'black'
+  },
 })
+
 
 const personImage = `https://images.unsplash.com/photo-1489362864900-696f8d15ae34?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`
