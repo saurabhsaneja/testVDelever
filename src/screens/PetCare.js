@@ -1,6 +1,6 @@
 import React from "react"
 import { View, ScrollView, Text, TouchableOpacity, useWindowDimensions, StyleSheet, TextInput, Image } from 'react-native'
-import { getSFProDisplayFont } from "../helpers"
+import { getSFProDisplayFont, popularServices } from "../helpers"
 import LinearGradient from "react-native-linear-gradient"
 import MenuImage from "../assets/images/menu2.svg";
 import StatusImage from "../assets/images/status2.svg";
@@ -163,6 +163,31 @@ const PetCare = ({ navigation }) => {
       </View>
     </LinearGradient>
   )
+  const SinglePopularService = () => {
+    return (
+      <View></View>
+    )
+  }
+  const PopularServices = () => {
+    return (
+      <View style={{ marginTop: 20 }} >
+        <Heading title='Popular Services' />
+        <View>
+          {popularServices?.map((pplr, index) => {
+            console.log('pplr', pplr?.image);
+            return (
+              <View key={index?.toString()} >
+                <Text style={styles.hello} >Hello, </Text>
+                <Text style={styles.fancy} >Fancy for a wash today!</Text>
+                {/* {pplr.image} */}
+              </View>
+            )
+          }
+          )}
+        </View>
+      </View>
+    )
+  }
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -172,6 +197,7 @@ const PetCare = ({ navigation }) => {
         <View style={styles.whiteContainer}>
           <MyTextInput />
           <Groomer />
+          <PopularServices />
           <ServiceProviders />
           <Ratings />
         </View>

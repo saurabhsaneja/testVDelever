@@ -5,6 +5,11 @@ import HomeCareImage from './assets/images/home-care.svg'
 import EventsImage from './assets/images/events.svg'
 import HealthcareImage from './assets/images/healthcare.svg'
 
+import PetAdoption from './assets/images/petAdoption.svg'
+import PetTraining from './assets/images/petTraining.svg'
+import PetDating from './assets/images/petDating.svg'
+import PetWalking from './assets/images/petWalking.svg'
+import PetGrooming from './assets/images/petGrooming.svg'
 
 export const getSFProDisplayFont = (type) => {
     let fullType = ''
@@ -108,4 +113,32 @@ export const categoriesData = [
         image: <HealthcareImage />,
         colors: ['white', '#CFCFFF']
     }],
+]
+
+export const popularServices = [
+    {
+        id: '1',
+        title: 'PetAdoption',
+        // image: <PetAdoption />
+    },
+    {
+        id: '2',
+        title: 'PetTraining',
+        // image: <PetTraining />
+    },
+    {
+        id: '3',
+        title: 'PetDating',
+        // image: <PetDating />
+    },
+    {
+        id: '4',
+        title: 'PetWalking',
+        // image: <PetWalking />
+    },
+    {
+        id: '5',
+        title: 'PetGrooming',
+        // image: <PetGrooming />
+    },
 ]
