@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ScreenNames } from 'global/Index';
 //screens
 import Home from '../screens/Home';
+import PetCare from '../screens/PetCare';
 
 const MainStack = () => {
   //variables
@@ -19,6 +20,7 @@ const MainStack = () => {
       screenOptions={screenOptions}
       initialRouteName={initialRouteName}>
       <Stack.Screen name={ScreenNames.HOME} component={Home} />
+      <Stack.Screen name={ScreenNames.PET_CARE} component={PetCare} />
     </Stack.Navigator>
   );
 };

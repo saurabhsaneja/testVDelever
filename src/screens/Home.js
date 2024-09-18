@@ -45,6 +45,7 @@ const Home = ({ navigation }) => {
     )
   }
 
+  const gotoPetCare = () => navigation.navigate(ScreenNames.PET_CARE)
   const Categories = () => {
     return (
       <View style={{ marginTop: 10 }} >
@@ -55,7 +56,9 @@ const Home = ({ navigation }) => {
               return (
                 <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={catColumn?.colors} style={styles.categoryBox} key={catColumn?.id} >
                   {catColumn?.image}
-                  <Text style={styles.categoryText} >{catColumn?.title}</Text>
+                  <TouchableOpacity onPress={catColumn?.title === 'Pet Care' ? gotoPetCare : () => { }} >
+                    <Text style={styles.categoryText} >{catColumn?.title}</Text>
+                  </TouchableOpacity>
                 </LinearGradient>
               )
             })}
@@ -82,7 +85,7 @@ const Home = ({ navigation }) => {
         <Text style={[styles.shareText, { width: '80%' }]} >Now share the Construction Sectors with your anyone and can save it as bookmark</Text>
         <View style={styles.updatedExplore} >
           <Text style={styles.updatedText} >Updated  |  06:30 AM</Text>
-          <TouchableOpacity style={[styles.exploreButton, { width: 76 / 390 * width, height: height * 24 / 1087 }]}>
+          <TouchableOpacity style={[styles.exploreButton, { width: 76 / 390 * width, height: height * 30 / 1087 }]}>
             <Text style={styles.exploreText}>Explore</Text>
           </TouchableOpacity>
         </View>
@@ -267,6 +270,7 @@ const styles = StyleSheet.create({
   updatedExplore: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginTop: 5
   }
 })
