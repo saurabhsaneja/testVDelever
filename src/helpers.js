@@ -4,12 +4,7 @@ import PetCareImage from './assets/images/pet-care.svg'
 import HomeCareImage from './assets/images/home-care.svg'
 import EventsImage from './assets/images/events.svg'
 import HealthcareImage from './assets/images/healthcare.svg'
-
-import PetAdoption from './assets/images/petAdoption.svg'
-import PetTraining from './assets/images/petTraining.svg'
-import PetDating from './assets/images/petDating.svg'
-import PetWalking from './assets/images/petWalking.svg'
-import PetGrooming from './assets/images/petGrooming.svg'
+import { Image } from 'react-native'
 
 export const getSFProDisplayFont = (type) => {
     let fullType = ''
@@ -118,27 +113,32 @@ export const categoriesData = [
 export const popularServices = [
     {
         id: '1',
-        title: 'PetAdoption',
-        // image: <PetAdoption />
+        title: 'Pet Adoption',
+        image: <Image source={require('./assets/images/PetAdoption.png')} />,
+        size: [166, 193]
     },
     {
         id: '2',
-        title: 'PetTraining',
-        // image: <PetTraining />
+        title: 'Pet Training',
+        image: <Image source={require('./assets/images/PetTraining.png')} />,
+        size: [166, 180]
     },
     {
         id: '3',
-        title: 'PetDating',
-        // image: <PetDating />
+        title: 'Pet Dating',
+        image: <Image source={require('./assets/images/PetDating.png')} />,
+        size: [166, 140]
     },
     {
         id: '4',
-        title: 'PetWalking',
-        // image: <PetWalking />
+        title: 'Pet Walking',
+        image: <Image source={require('./assets/images/PetWalking.png')} />,
+        size: [166, 193]
     },
     {
         id: '5',
-        title: 'PetGrooming',
-        // image: <PetGrooming />
+        title: 'Pet Grooming',
+        image: <Image source={require('./assets/images/PetGrooming.png')} />,
+        size: [166, 193]
     },
 ]

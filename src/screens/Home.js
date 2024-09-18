@@ -51,7 +51,7 @@ const Home = ({ navigation }) => {
       <View style={{ marginTop: 10 }} >
         <Heading title='Explore Categories' />
         {categoriesData?.map((catRow, rowIndex) =>
-          <View style={styles.categoryRow} key={rowIndex?.toString} >
+          <View style={styles.categoryRow} key={rowIndex?.toString()} >
             {catRow?.map((catColumn, columnIndex) => {
               return (
                 <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={catColumn?.colors} style={styles.categoryBox} key={catColumn?.id} >

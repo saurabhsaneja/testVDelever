@@ -163,24 +163,24 @@ const PetCare = ({ navigation }) => {
       </View>
     </LinearGradient>
   )
-  const SinglePopularService = () => {
+  const SinglePopularService = ({ pplr }) => {
+    // width: pplr?.size[0] / 390 * width, height: pplr?.size[1] / 1087 * height
     return (
-      <View></View>
+      <View style={[styles.item, { backgroundColor: '#FFE7EA', height: pplr?.size[1], width: pplr?.size[0] / 390 * width }]}>
+        {pplr?.image}
+        <Text style={styles.itemText}>{pplr?.title}</Text>
+      </View>
     )
   }
   const PopularServices = () => {
     return (
       <View style={{ marginTop: 20 }} >
         <Heading title='Popular Services' />
-        <View>
+        <View style={styles.grid} >
           {popularServices?.map((pplr, index) => {
             console.log('pplr', pplr?.image);
             return (
-              <View key={index?.toString()} >
-                <Text style={styles.hello} >Hello, </Text>
-                <Text style={styles.fancy} >Fancy for a wash today!</Text>
-                {/* {pplr.image} */}
-              </View>
+              <SinglePopularService key={index?.toString()} pplr={pplr} />
             )
           }
           )}
@@ -413,6 +413,23 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: getSFProDisplayFont('BO'),
     color: 'black'
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  item: {
+    borderRadius: 30,
+    padding: 10,
+    margin: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  itemText: {
+    fontSize: 16,
+    color: '#000',
+    fontFamily: getSFProDisplayFont('S')
   },
 })
 
