@@ -112,16 +112,16 @@ export const categoriesData = [
 
 export const popularServices = [
     {
-        id: '1',
-        title: 'Pet Adoption',
-        image: <Image source={require('./assets/images/PetAdoption.png')} />,
+        id: '5',
+        title: 'Pet Grooming',
+        image: <Image source={require('./assets/images/PetGrooming.png')} />,
         size: [166, 193]
     },
     {
-        id: '2',
-        title: 'Pet Training',
-        image: <Image source={require('./assets/images/PetTraining.png')} />,
-        size: [166, 180]
+        id: '4',
+        title: 'Pet Walking',
+        image: <Image source={require('./assets/images/PetWalking.png')} />,
+        size: [166, 140]
     },
     {
         id: '3',
@@ -130,15 +130,15 @@ export const popularServices = [
         size: [166, 140]
     },
     {
-        id: '4',
-        title: 'Pet Walking',
-        image: <Image source={require('./assets/images/PetWalking.png')} />,
+        id: '2',
+        title: 'Pet Training',
+        image: <Image source={require('./assets/images/PetTraining.png')} />,
         size: [166, 193]
     },
     {
-        id: '5',
-        title: 'Pet Grooming',
-        image: <Image source={require('./assets/images/PetGrooming.png')} />,
+        id: '1',
+        title: 'Pet Adoption',
+        image: <Image source={require('./assets/images/PetAdoption.png')} />,
         size: [166, 193]
     },
 ]
