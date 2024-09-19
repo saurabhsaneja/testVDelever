@@ -7,13 +7,14 @@ import {
 } from 'react-native';
 import MainStack from './src/navigation/MainStack';
 import { Colors } from 'global/Index';
+import colorStore from './src/colorStore';
 
 function App(): React.JSX.Element {
-
+  const { color } = colorStore()
   return (
     <NavigationContainer>
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar backgroundColor={'#9766FF'} />
+        <StatusBar backgroundColor={color} />
         <MainStack />
       </SafeAreaView>
     </NavigationContainer>

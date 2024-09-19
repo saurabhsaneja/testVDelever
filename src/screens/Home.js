@@ -20,10 +20,22 @@ import RecommendedRightDark from '../assets/images/recommendedRightDark.svg';
 import RecommendedLeftDark from '../assets/images/recommendedLeftDark.svg';
 import RecommendedLeftLight from '../assets/images/recommendedLeftLight.svg';
 import BottomTab from '../components/BottomTab';
+import colorStore from '../colorStore';
+import { useFocusEffect } from '@react-navigation/native';
 
 const Home = ({ navigation }) => {
   const { height, width } = useWindowDimensions();
+  const { updateColor } = colorStore()
+  useFocusEffect(
+    React.useCallback(() => {
+      updateColor('#9766FF')
 
+      return () => { }
+    }, [])
+  );
+  // useEffect(() => {
+  //   updateColor('#9766FF')
+  // }, [])
   const Header = () => {
     return (
       <View style={styles.headerContainer}>
@@ -186,7 +198,7 @@ const styles = StyleSheet.create({
   input: {
     // fontSize: 12,
     // fontFamily: getSFProDisplayFont('R'),
-    // color: 'black',
+    color: 'black',
     // height: '100%',
     marginLeft: 20,
   },

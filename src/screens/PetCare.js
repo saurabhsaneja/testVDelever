@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { View, ScrollView, Text, TouchableOpacity, useWindowDimensions, StyleSheet, TextInput, Image } from 'react-native'
 import { getSFProDisplayFont, popularServices } from "../helpers"
 import LinearGradient from "react-native-linear-gradient"
@@ -23,10 +23,14 @@ import GroomerImage from "../assets/images/groomer.svg";
 import GroomerLeftImage from "../assets/images/groomerLeft.svg";
 import GroomerRightImage from "../assets/images/groomerRight.svg";
 import BottomTab from "../components/BottomTab";
+import colorStore from "../colorStore";
 
 const PetCare = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
-
+  const { updateColor } = colorStore()
+  useEffect(() => {
+    updateColor('#fcb0b0')
+  }, []) 
   const Header = () => {
     return (
       <View style={styles.headerContainer}>
@@ -286,7 +290,7 @@ const styles = StyleSheet.create({
   input: {
     // fontSize: 12,
     // fontFamily: getSFProDisplayFont('R'),
-    // color: 'black',
+    color: 'black',
     // height: '100%',
     marginLeft: 20,
   },
