@@ -168,6 +168,7 @@ const PetCare = ({ navigation }) => {
     return (
       <View style={[styles.item, { backgroundColor: '#FFE7EA', height: pplr?.size[1], width: pplr?.size[0] / 390 * width }]}>
         {pplr?.image}
+        {pplr?.edgeImages}
         <Text style={styles.itemText}>{pplr?.title}</Text>
       </View>
     )
@@ -231,7 +232,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   bellContainer: {
-    backgroundColor: '#fdd4e6',
+    backgroundColor: '#FFCBCB',
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -425,6 +426,7 @@ const styles = StyleSheet.create({
     margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden'
   },
   itemText: {
     fontSize: 16,

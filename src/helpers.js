@@ -4,7 +4,7 @@ import PetCareImage from './assets/images/pet-care.svg'
 import HomeCareImage from './assets/images/home-care.svg'
 import EventsImage from './assets/images/events.svg'
 import HealthcareImage from './assets/images/healthcare.svg'
-import { Image } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
 
 export const getSFProDisplayFont = (type) => {
     let fullType = ''
@@ -115,30 +115,70 @@ export const popularServices = [
         id: '5',
         title: 'Pet Grooming',
         image: <Image source={require('./assets/images/PetGrooming.png')} />,
-        size: [166, 193]
+        size: [166, 193],
+        edgeImages: (<>
+            <View style={{ position: 'absolute', top: 0, left: 0 }} >
+                <Image source={require('./assets/images/PGroomingTopLeft.png')} />
+            </View>
+            <View style={{ position: 'absolute', right: 0, bottom: 0 }} >
+                <Image source={require('./assets/images/PGroomingRightBottom.png')} />
+            </View>
+        </>)
     },
     {
         id: '4',
         title: 'Pet Walking',
         image: <Image source={require('./assets/images/PetWalking.png')} />,
-        size: [166, 140]
+        size: [166, 140],
+        edgeImages: (<>
+            <View style={{ position: 'absolute', right: 0, top: 0 }} >
+                <Image source={require('./assets/images/PWalkingTopRight.png')} />
+            </View>
+            <View style={{ position: 'absolute', left: 0, bottom: 0 }} >
+                <Image source={require('./assets/images/PWalkingLeftBottom.png')} />
+            </View>
+        </>)
     },
     {
         id: '3',
         title: 'Pet Dating',
         image: <Image source={require('./assets/images/PetDating.png')} />,
-        size: [166, 140]
+        size: [166, 140],
+        edgeImages: (<>
+            <View style={{ position: 'absolute', left: 0, bottom: 0 }} >
+                <Image source={require('./assets/images/PDatingBottomLeft.png')} />
+            </View>
+            <View style={{ position: 'absolute', right: 0, top: 0 }} >
+                <Image source={require('./assets/images/PDatingTopRight.png')} />
+            </View>
+        </>)
     },
     {
         id: '2',
         title: 'Pet Training',
         image: <Image source={require('./assets/images/PetTraining.png')} />,
-        size: [166, 193]
+        size: [166, 193],
+        edgeImages: (<>
+            <View style={{ position: 'absolute', right: 0, bottom: 0 }} >
+                <Image source={require('./assets/images/PTrainingRightBottom.png')} />
+            </View>
+            <View style={{ position: 'absolute', left: 0, top: 0 }} >
+                <Image source={require('./assets/images/PTrainingLeftTop.png')} />
+            </View>
+        </>)
     },
     {
         id: '1',
         title: 'Pet Adoption',
         image: <Image source={require('./assets/images/PetAdoption.png')} />,
-        size: [166, 193]
+        size: [166, 193],
+        edgeImages: (<>
+            <View style={{ position: 'absolute', top: 0, left: 0 }} >
+                <Image source={require('./assets/images/PGroomingTopLeft.png')} />
+            </View>
+            <View style={{ position: 'absolute', right: 0, bottom: 0 }} >
+                <Image source={require('./assets/images/PGroomingRightBottom.png')} />
+            </View>
+        </>)
     },
 ]
