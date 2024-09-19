@@ -22,6 +22,7 @@ import EditIconImage from "../assets/images/editIcon.svg";
 import GroomerImage from "../assets/images/groomer.svg";
 import GroomerLeftImage from "../assets/images/groomerLeft.svg";
 import GroomerRightImage from "../assets/images/groomerRight.svg";
+import BottomTab from "../components/BottomTab";
 
 const PetCare = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
@@ -203,6 +204,7 @@ const PetCare = ({ navigation }) => {
           <Ratings />
         </View>
       </ScrollView>
+      <BottomTab />
     </View>
   )
 }

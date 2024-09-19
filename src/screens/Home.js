@@ -19,6 +19,7 @@ import RecommendedRightLight from '../assets/images/recommendedRightLight.svg';
 import RecommendedRightDark from '../assets/images/recommendedRightDark.svg';
 import RecommendedLeftDark from '../assets/images/recommendedLeftDark.svg';
 import RecommendedLeftLight from '../assets/images/recommendedLeftLight.svg';
+import BottomTab from '../components/BottomTab';
 
 const Home = ({ navigation }) => {
   const { height, width } = useWindowDimensions();
@@ -123,6 +124,7 @@ const Home = ({ navigation }) => {
           <Recommended />
         </View>
       </ScrollView>
+      <BottomTab screenName='Home' />
     </View>
   );
 };
